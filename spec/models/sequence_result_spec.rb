@@ -13,10 +13,6 @@ RSpec.describe SequenceResult, type: :model do
     context 'when number is not digits' do
       it { should_not allow_value(Faker::Lorem.word).for(:number) }
     end
-    # тестируем валидации, когда number является числом
-    context 'when x or y are digits' do
-      it { should allow_value(Faker::Number.number).for(:number) }
-    end
   end
 
   # тестируем работу метода show
