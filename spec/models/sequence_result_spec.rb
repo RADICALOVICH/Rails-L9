@@ -9,7 +9,6 @@ RSpec.describe SequenceResult, type: :model do
     it { should validate_presence_of(:number).with_message("can't be blank") }
     it { should validate_presence_of(:string_array).with_message("can't be blank") }
 
-    # тестируем валидации, когда x и y не являются числами
     context 'when number is not digits' do
       it { should_not allow_value(Faker::Lorem.word).for(:number) }
     end
