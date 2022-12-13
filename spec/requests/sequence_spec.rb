@@ -17,7 +17,7 @@ RSpec.describe 'Sequences', type: :request do
     end
   end
 
-  describe 'GET /show' do
+  describe 'POST /show' do
     # Сценарий, когда параметры неправильные
     context 'when params are valid' do
       let(:number_params) { 3 }
